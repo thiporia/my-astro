@@ -1,0 +1,14 @@
+---
+import Layout from './Layout.astro';
+import { format } from 'date-fns';
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout title={frontmatter.title}>
+  <article class="prose lg:prose-xl dark:prose-invert mx-auto px-4 py-8">
+    <h1>{frontmatter.title}</h1>
+    <p>By {frontmatter.author} • {format(new Date(frontmatter.pubDate), 'MMMM d, yyyy')}</p>
+    <slot />
+  </article>
+</Layout>

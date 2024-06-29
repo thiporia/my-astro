@@ -1,0 +1,12 @@
+---
+import { ModeToggle } from './ModeToggle';
+---
+
+<header class="py-4 px-8 bg-background">
+  <div class="container mx-auto flex justify-between items-center">
+    <a href="/" class="text-2xl font-bold">My Blog</a>
+    <nav>
+      <ModeToggle client:load />
+    </nav>
+  </div>
+</header>
